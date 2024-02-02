@@ -1,0 +1,1 @@
+ /home/george/Escritorio/respaldo/.dart_tool/flutter_build/b9071188600640443beb0f6f87926e8f/native_assets.yaml: 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/george/Escritorio/mobileapp-tareas/explorak5/linux
+# Install script for directory: /home/george/Escritorio/respaldo/linux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,109 +39,109 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   
-  file(REMOVE_RECURSE "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/")
+  file(REMOVE_RECURSE "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/")
   
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5")
+  if(EXISTS "$ENV{DESTDIR}/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5"
+         FILE "$ENV{DESTDIR}/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5"
          RPATH "$ORIGIN/lib")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5")
+   "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle" TYPE EXECUTABLE FILES "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/intermediates_do_not_run/explorak5")
-  if(EXISTS "$ENV{DESTDIR}/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5")
+file(INSTALL DESTINATION "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle" TYPE EXECUTABLE FILES "/home/george/Escritorio/respaldo/build/linux/x64/debug/intermediates_do_not_run/explorak5")
+  if(EXISTS "$ENV{DESTDIR}/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5"
-         OLD_RPATH "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/plugins/flutter_secure_storage_linux:/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/plugins/url_launcher_linux:/home/george/Escritorio/mobileapp-tareas/explorak5/linux/flutter/ephemeral:"
+         FILE "$ENV{DESTDIR}/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5"
+         OLD_RPATH "/home/george/Escritorio/respaldo/build/linux/x64/debug/plugins/flutter_secure_storage_linux:/home/george/Escritorio/respaldo/build/linux/x64/debug/plugins/url_launcher_linux:/home/george/Escritorio/respaldo/linux/flutter/ephemeral:"
          NEW_RPATH "$ORIGIN/lib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/snap/flutter/current/usr/bin/strip" "$ENV{DESTDIR}/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/explorak5")
+      execute_process(COMMAND "/snap/flutter/current/usr/bin/strip" "$ENV{DESTDIR}/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/explorak5")
     endif()
   endif()
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/data/icudtl.dat")
+   "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/data/icudtl.dat")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/data" TYPE FILE FILES "/home/george/Escritorio/mobileapp-tareas/explorak5/linux/flutter/ephemeral/icudtl.dat")
+file(INSTALL DESTINATION "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/data" TYPE FILE FILES "/home/george/Escritorio/respaldo/linux/flutter/ephemeral/icudtl.dat")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so")
+   "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/george/Escritorio/mobileapp-tareas/explorak5/linux/flutter/ephemeral/libflutter_linux_gtk.so")
+file(INSTALL DESTINATION "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/george/Escritorio/respaldo/linux/flutter/ephemeral/libflutter_linux_gtk.so")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/lib/libflutter_secure_storage_linux_plugin.so")
+   "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/lib/libflutter_secure_storage_linux_plugin.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/plugins/flutter_secure_storage_linux/libflutter_secure_storage_linux_plugin.so")
+file(INSTALL DESTINATION "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/george/Escritorio/respaldo/build/linux/x64/debug/plugins/flutter_secure_storage_linux/libflutter_secure_storage_linux_plugin.so")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/lib/liburl_launcher_linux_plugin.so")
+   "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/lib/liburl_launcher_linux_plugin.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/plugins/url_launcher_linux/liburl_launcher_linux_plugin.so")
+file(INSTALL DESTINATION "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/lib" TYPE FILE FILES "/home/george/Escritorio/respaldo/build/linux/x64/debug/plugins/url_launcher_linux/liburl_launcher_linux_plugin.so")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   
-  file(REMOVE_RECURSE "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/data/flutter_assets")
+  file(REMOVE_RECURSE "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/data/flutter_assets")
   
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xRuntimex" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/data/flutter_assets")
+   "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/data/flutter_assets")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle/data" TYPE DIRECTORY FILES "/home/george/Escritorio/mobileapp-tareas/explorak5/build//flutter_assets")
+file(INSTALL DESTINATION "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle/data" TYPE DIRECTORY FILES "/home/george/Escritorio/respaldo/build//flutter_assets")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/flutter/cmake_install.cmake")
-  include("/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/plugins/flutter_secure_storage_linux/cmake_install.cmake")
-  include("/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/plugins/url_launcher_linux/cmake_install.cmake")
+  include("/home/george/Escritorio/respaldo/build/linux/x64/debug/flutter/cmake_install.cmake")
+  include("/home/george/Escritorio/respaldo/build/linux/x64/debug/plugins/flutter_secure_storage_linux/cmake_install.cmake")
+  include("/home/george/Escritorio/respaldo/build/linux/x64/debug/plugins/url_launcher_linux/cmake_install.cmake")
 
 endif()
 
@@ -153,5 +153,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/george/Escritorio/respaldo/build/linux/x64/debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -28,10 +28,10 @@ class AssignmentDescriptionScreen extends StatefulWidget {
   final Function(int assignmentId) onDone;
 
   AssignmentDescriptionScreen({
-    Key key,
-    @required this.assignment,
-    this.course,
-    this.onDone(int assignmentId),
+    Key? key,
+    required this.assignment,
+    required this.course,
+    required this.onDone(int assignmentId),
   }) : super(key: key);
 
   @override

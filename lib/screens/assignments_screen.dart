@@ -14,7 +14,7 @@ import '../models/courses.dart';
 class ListAssignmentsScreen extends StatefulWidget {
   final Course course;
 
-  ListAssignmentsScreen({Key key, @required this.course}) : super(key: key);
+  ListAssignmentsScreen({Key? key, required this.course}) : super(key: key);
 
   @override
   _ListAssignmentsScreen createState() => _ListAssignmentsScreen(course);

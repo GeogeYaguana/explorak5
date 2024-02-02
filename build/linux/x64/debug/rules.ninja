@@ -80,7 +80,7 @@ rule CXX_SHARED_LIBRARY_LINKER__url_launcher_linux_plugin
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /snap/flutter/145/usr/bin/cmake -S/home/george/Escritorio/mobileapp-tareas/explorak5/linux -B/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug
+  command = /snap/flutter/145/usr/bin/cmake -S/home/george/Escritorio/respaldo/linux -B/home/george/Escritorio/respaldo/build/linux/x64/debug
   description = Re-running CMake...
   generator = 1
 

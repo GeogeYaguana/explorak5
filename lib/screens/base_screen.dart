@@ -16,8 +16,8 @@ class BaseScreen extends StatefulWidget {
 
   BaseScreen({
     Key? key,
-    this.course,
-  }) : super(key: key);
+    required this.course,
+      }) : super(key: key);
   @override
   _BaseScreen createState() => _BaseScreen(course);
 }

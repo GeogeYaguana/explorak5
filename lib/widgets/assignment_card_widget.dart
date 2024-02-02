@@ -19,10 +19,10 @@ class AssignmentCard extends StatefulWidget {
   final Function(int assignmentId) onDone;
 
   AssignmentCard({
-    Key key,
-    @required this.assignment,
-    @required this.course,
-    this.onDone,
+    Key? key,
+    required this.assignment,
+    required this.course,
+    required this.onDone,
   }) : super(key: key);
   @override
   _AssignmentCardState createState() =>

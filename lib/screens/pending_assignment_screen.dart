@@ -14,7 +14,7 @@ import '../models/courses.dart';
 class PendingAssignmentsScreen extends StatefulWidget {
   final Course course;
 
-  PendingAssignmentsScreen({Key key, @required this.course}) : super(key: key);
+  PendingAssignmentsScreen({Key? key, required this.course}) : super(key: key);
 
   @override
   _PendingAssignmentsScreen createState() => _PendingAssignmentsScreen(course);

@@ -233,8 +233,8 @@ class _SplashScreenState extends State<CoursesScreen> {
 
   void listenToNotification() =>
       AutoUpdate.service.onNotificationClick.listen((payload) {
-        Course course;
-        String courseId = payload.split(',')[0];
+      Course? course;
+          String courseId = payload.split(',')[0];
         for (Course curso in CoursesProvider.availableCourses) {
           if (curso.id == int.parse(courseId)) {
             setState(() {
@@ -243,9 +243,14 @@ class _SplashScreenState extends State<CoursesScreen> {
           }
         }
 
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => BaseScreen(course: course)));
-      });
+     // Check if course is not null before using it
+    if (course != null) {
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => BaseScreen(course: course!),
+      ));
+    } else {
+      // Handle the case when course is null
+      // You may want to show an error message or take appropriate action
+    }
+  });
 }

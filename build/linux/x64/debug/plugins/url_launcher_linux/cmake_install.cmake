@@ -1,8 +1,8 @@
-# Install script for directory: /home/george/Escritorio/mobileapp-tareas/explorak5/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux
+# Install script for directory: /home/george/Escritorio/respaldo/linux/flutter/ephemeral/.plugin_symlinks/url_launcher_linux/linux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/george/Escritorio/mobileapp-tareas/explorak5/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/george/Escritorio/respaldo/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

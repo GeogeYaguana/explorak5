@@ -11,9 +11,9 @@ class CourseCard extends StatefulWidget {
   final String color;
 
   CourseCard({
-    Key key,
-    @required this.course,
-    @required this.color,
+    Key? key,
+    required this.course,
+    required this.color,
   }) : super(key: key);
   @override
   _CourseCardState createState() => _CourseCardState(course, color);
