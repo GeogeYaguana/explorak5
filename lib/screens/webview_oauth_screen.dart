@@ -19,42 +19,53 @@ class WebviewOauthScreen extends StatefulWidget {
 }
 
 class _WebviewOauthScreenState extends State<WebviewOauthScreen> {
-  late StreamController<String> someStreamController;
-  late StreamSubscription _onDestroy;
-  late StreamSubscription<String> _onUrlChanged;
-  late StreamSubscription<WebViewStateChanged> _onStateChanged;
-  String code;
+  final flutterWebviewPlugin = FlutterWebviewPlugin();
+  StreamSubscription<dynamic>? _onDestroy;
+  StreamSubscription<String>? _onUrlChanged;
+  StreamSubscription<WebViewStateChanged>? _onStateChanged;
+
+  String code = '';
   String grantType = "authorization_code";
-  String loginUrl;
+  String loginUrl='';
   final _authenticationAPI = GetIt.instance<AuthenticationAPI>();
   final _authenticationClient = GetIt.instance<AuthenticationClient>();
   static final _userAPI = GetIt.instance<UserAPI>();
   var isConnected = true;
-  late FlutterWebviewPlugin flutterWebviewPlugin;
-
-  @override
-  void initState() {
-    super.initState();
-    
-    someStreamController = StreamController<String>();
-    _onDestroy = StreamController().stream.listen((event) {});
-    _onUrlChanged = flutterWebviewPlugin.onUrlChanged.listen((String url) {});
-    _onStateChanged = flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged state) {});
-
-    flutterWebviewPlugin = FlutterWebviewPlugin();
-    // Other initState logic
-  }
 
   @override
   void dispose() {
     // Every listener should be canceled, the same should be done with this stream.
-    _onDestroy.cancel();
-    _onUrlChanged.cancel();
-    _onStateChanged.cancel();
+    _onDestroy?.cancel();
+    _onUrlChanged?.cancel();
+    _onStateChanged?.cancel();
+
     flutterWebviewPlugin.dispose();
-    someStreamController.close();
     super.dispose();
   }
+
+  @override
+  void initState() {
+    super.initState();
+
+    flutterWebviewPlugin.close();
+    loginUrl = BASE_URL +
+        "/login/oauth2/auth?client_id=$CLIENT_ID&response_type=code&redirect_uri=$REDIRECT_URI";
+    // Add a listener to on destroy WebView, so you can make came actions.
+    _onDestroy = flutterWebviewPlugin.onDestroy.listen((_) {});
+    _onStateChanged =
+        flutterWebviewPlugin.onStateChanged.listen((WebViewStateChanged state) {
+      if (mounted) {
+        if (state.type == WebViewState.startLoad &&
+            state.url.contains("error=access_denied")) {
+          flutterWebviewPlugin.hide();
+          flutterWebviewPlugin.stopLoading();
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => CoursesScreen(key: UniqueKey())),
+          (_) => false,
+        );
+        } else if (state.type == WebViewState.abortLoad) {}
+      }
+    });
 
     // Add a listener to on url changed
     _onUrlChanged =
@@ -81,7 +92,7 @@ class _WebviewOauthScreenState extends State<WebviewOauthScreen> {
             final userData = UserData.fromJson(sessionData);
             await _authenticationClient.saveSession(userData);
             Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute(builder: (context) => CoursesScreen()),
+                MaterialPageRoute(builder: (context) => CoursesScreen(key: UniqueKey())),
                 (_) => false);
           } else {
             Fluttertoast.showToast(
