@@ -14,7 +14,7 @@ import 'module_provider.dart';
 class ModulesScreen extends StatefulWidget {
   final Course course;
 
-  ModulesScreen({Key key, @required this.course}) : super(key: key);
+  ModulesScreen({Key? key, required this.course}) : super(key: key);
 
   @override
   _ModulesScreen createState() => _ModulesScreen(course);

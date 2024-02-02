@@ -13,18 +13,33 @@ class CoursesAPI {
     final userData = await _authenticationClient.userData;
     print(userData.token);
     return _http.request('/api/v1/users/self/courses?include=course_image',
-        method: 'GET', headers: {"Authorization": "Bearer " + userData.token});
+    method: 'GET',
+    
+            headers: {"Authorization": "Bearer " + userData.token},
+            
+            onSendProgress: (int sent, int total) {
+              // Handle progress updates if needed
+            },
+                    queryParameters: {"include": "course_image"});
   }
 
   Future<HttpResponse> getCourseId(String id) async {
     final userData = await _authenticationClient.userData;
     return _http.request('/api/v1/courses/$id',
-        method: 'GET', headers: {"Authorization": "Bearer " + userData.token});
+        method: 'GET', headers: {"Authorization": "Bearer " + userData.token},
+                onSendProgress: (int sent, int total) {
+          // Handle progress updates if needed
+        },        queryParameters: {"include": "course_image"});
+        
   }
 
   Future<HttpResponse> getCoursesTerms() async {
     final userData = await _authenticationClient.userData;
     return _http.request('/api/v1/users/self/courses?include=grading_periods',
-        method: 'GET', headers: {"Authorization": "Bearer " + userData.token});
+        method: 'GET', headers: {"Authorization": "Bearer " + userData.token},
+        onSendProgress: (int sent, int total) {
+          // Handle progress updates if needed
+        },
+                queryParameters: {"include": "course_image"});
   }
 }

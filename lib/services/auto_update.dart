@@ -42,7 +42,7 @@ class AutoUpdate {
                 noti.id, noti.title, noti.body, payload);
           } else if (pref.getString(StorageClient.keyNoti) != null) {
             // not first time witing notification in LS
-            String localNoti = pref.getString(StorageClient.keyNoti);
+            String localNoti = pref.getString(StorageClient.keyNoti) ?? "default_value";           
             List<Notificacion> listNoti = Notificacion.decode(localNoti);
             List<int> setId = [];
             for (var notifi in listNoti) {

@@ -12,7 +12,10 @@ class AssignmentsAPI {
   Future<HttpResponse> getAssignments(int courseId) async {
     final userData = await _authenticationClient.userData;
     return _http.request('/api/v1/courses/$courseId/assignments/',
-        method: 'GET', headers: {"Authorization": "Bearer " + userData.token});
+        method: 'GET', headers: {"Authorization": "Bearer " + userData.token},
+        onSendProgress: (int sent, int total) {
+          // Handle progress updates if needed
+        },        queryParameters: {"include": "course_image"});
   }
 
   String getAssignmentImg(int assignmentId) {

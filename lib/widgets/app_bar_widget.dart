@@ -7,7 +7,7 @@ import 'about_alert_widget.dart';
 
 class AppBarExplora extends StatefulWidget implements PreferredSizeWidget {
   AppBarExplora({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

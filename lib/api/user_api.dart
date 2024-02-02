@@ -6,9 +6,13 @@ class UserAPI {
   final Http _http;
 
   UserAPI(this._http);
-
-  Future<HttpResponse> getUserData(String token) async {
+Future<HttpResponse> getUserData(String token) async {
     return _http.request('/api/v1/users/self',
-        method: 'GET', headers: {"Authorization": "Bearer " + token});
+        method: 'GET',
+        headers: {"Authorization": "Bearer " + token},
+        onSendProgress: (int sent, int total) {
+          // Handle progress updates if needed
+        },
+                queryParameters: {"include": "course_image"});
   }
 }

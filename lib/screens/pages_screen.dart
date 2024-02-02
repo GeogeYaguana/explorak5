@@ -13,7 +13,7 @@ import 'constants.dart';
 class PageScreen extends StatefulWidget {
   final Course course;
 
-  PageScreen({Key key, @required this.course}) : super(key: key);
+  PageScreen({Key? key, required this.course}) : super(key: key);
 
   @override
   _PageScreen createState() => _PageScreen(course);

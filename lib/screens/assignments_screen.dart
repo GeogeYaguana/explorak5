@@ -201,6 +201,10 @@ class _ListAssignmentsScreen extends State<ListAssignmentsScreen> {
                                             visible: isVisible2,
                                             child: AssignmentCard(
                                                 assignment: assignment,
+                                                onDone: (assignmentId) {
+                                                assignmentsListProvider
+                                                    .updateList(assignmentId);
+                                              },                                             
                                                 course: course));
                                       })),
                         ),

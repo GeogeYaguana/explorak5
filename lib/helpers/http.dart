@@ -6,16 +6,16 @@ import './http_response.dart';
 class Http {
   Dio dio;
 
-  Http({this.dio});
+  Http({required this.dio});
 
   Future<HttpResponse> request(
     String path, {
     String method = "GET",
     String contentType = "application/json",
-    Map<String, dynamic> queryParameters,
+    required Map<String, dynamic> queryParameters,
     dynamic data,
-    Map<String, String> headers,
-    Function(int sent, int total) onSendProgress,
+    required Map<String, String> headers,
+    required Function(int sent, int total) onSendProgress,
   }) async {
     (dio.httpClientAdapter as IOHttpClientAdapter).onHttpClientCreate =
         (HttpClient client) {

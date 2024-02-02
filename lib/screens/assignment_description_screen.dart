@@ -108,8 +108,8 @@ class _AssignmentDescriptionScreen extends State<AssignmentDescriptionScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           },
-                          onLinkTap: (url, _, __, ___) {
-                            handleUrl(url);
+                          onLinkTap: (url, attrs, element) {
+                            handleUrl(url ?? "default_url");
                           }))),
               Padding(
                   padding: PADDING_LARGE,

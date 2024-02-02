@@ -98,7 +98,10 @@ class _AssignmentCardState extends State<AssignmentCard> {
                                 builder: (context) =>
                                     AssignmentDescriptionScreen(
                                         course: course,
-                                        assignment: assignment)));
+                                          onDone: (int result) {
+                                                            },
+                                        assignment: assignment,
+                                        )));
                           },
                           child: Column(
                               mainAxisSize: MainAxisSize.min,

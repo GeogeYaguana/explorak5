@@ -15,7 +15,7 @@ import '../models/grades.dart';
 class GradesScreen extends StatefulWidget {
   final Course course;
 
-  GradesScreen({Key key, @required this.course}) : super(key: key);
+  GradesScreen({Key? key, required this.course}) : super(key: key);
 
   @override
   _GradesScreen createState() => _GradesScreen(course);
